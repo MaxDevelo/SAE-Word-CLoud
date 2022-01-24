@@ -1,0 +1,2 @@
+Mon programme m'était beaucoup de temps à compiler car je lisais chaque fois les etapes et stopwords
+dans une bloucle. J'ai tous mis en dehors de ma boucle. Je passe de 4min de compilation à environs 6/8s.

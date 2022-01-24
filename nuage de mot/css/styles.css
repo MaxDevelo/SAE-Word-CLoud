@@ -1,0 +1,504 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:600");
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amatic+SC:wght@400;700&family=Roboto:wght@700;900&display=swap');
+@font-face {
+  font-family: "University";
+  src: url("../font/University.otf") 
+
+ }
+
+
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* Pour  que la page web  soit  collé sur les bord */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Les élément seront bleu lorsque l'on sélection des élément de la pagew */
+*::selection{
+  color:rgb(84, 124, 170)
+}
+
+/* --------------------------------------------------- */
+/* ---------------------Global----------------------- */
+/* --------------------------------------------------- */
+
+/* Mise en place du fond d'écran */
+body {
+ background: url('../images/elysee.jpg')  no-repeat center fixed;
+ background-size: cover;
+ -webkit-background-size: cover;
+}
+
+/* --------------------------------------------------- */
+/* ---------------------Navigation---------------------*/
+/* --------------------------------------------------- */
+
+/* Mise en place du menu */
+#navigation ol{
+  list-style: none;
+  display: flex;
+  background: #2a5d7c;
+  height: 60px; 
+  justify-content: center;
+  padding-top: 10px;
+
+}
+
+
+
+/* Mise en place des different lien sur le menu */
+#navigation li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 80px;
+  justify-content: flex-end;
+  font-size: 30px;
+  font-family: "Amatic SC", cursive;
+  letter-spacing: 2px;
+  font-weight: bold;
+ 
+}
+
+/* Barre blanche en dessous du mot lorsque l'on met la souris dessus */
+#navigation li a:hover {
+  border-bottom: white 4px solid;
+  transition: 0.2s ease-in-out;
+  
+}
+/* Va permettre d'afficher le trait blanc lorsque l'on est sur la page concernée*/
+li.current-menu a {
+	border-bottom: white 4px solid;
+  transition: 0.2s ease-in-out;
+}
+
+/* -----------------------Menu Déroulante------------------------------ */
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  z-index: 10; /*Permet d'etre mis en avant plan.q*/
+  white-space:nowrap
+}
+
+
+/* Cible tous les élément (enfants) qui sont en dessous de nav et ul */
+nav > ul > li {
+  position: relative;
+  display: inline-block;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-top: 1.3%;
+  
+}
+
+
+
+li > ul > li:hover {
+  background-color: rgb(129, 175, 201);
+  transition: 0.4s ease-in-out;
+}
+li > ul > li:hover a {
+  color: #fff;
+  
+}
+li > ul > li {
+  padding: 5px;
+}
+
+nav li > ul {
+  display: none;
+  position: absolute;
+  border: 1px solid #444;
+  background: #003049;
+  border-radius: 0 0 10px 10px ;
+  box-shadow: black 4px 2px 10px;
+}
+
+nav li:hover > ul {
+  display: block;
+  width: 16%;
+  
+}
+
+
+
+nav li:hover > ul.datePresident{
+    width: 200px;
+    background: #0f5377;
+    
+
+  }
+
+  
+nav li:hover > ul.periode{
+  width: 120px;
+    background: #0f5377;
+}
+
+
+
+  /* --------------------------------------------------- */
+/* -------------------------main---------------------*/
+/* --------------------------------------------------- */
+
+
+/* Titre */
+
+h1 {
+	color: rgb(224, 227, 238);
+	font-family: "University";
+	font-size: 7rem;
+	text-transform: uppercase;
+  text-align: center;
+  margin-top: 250px;
+  letter-spacing: 6px; 
+}
+
+/* Mise en place des différentes lettre pour le titre */
+span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px) rotate(90deg);
+  transform-origin: left;
+  animation: animation 2s forwards;
+}
+
+/* Ombre */
+span.bleu{
+  text-shadow: rgb(43, 43, 236) 7px 3px 0px;
+}
+/* Ombre*/
+span.rouge{
+  text-shadow: rgb(236, 43, 43) 7px 3px 0px;
+}
+
+/* Mise en place de deux barres lors de la souris sur une des lettres (une barre en haut et une barre en bas) */
+span.bleu:hover {
+ border-bottom: solid rgb(43, 43, 236) 8px;
+ border-top: solid rgb(43, 43, 236) 8px;
+ margin-top:-8px;
+ transition:  0.4s;
+}
+
+/* Mise en place de deux barres lors de la souris sur une des lettres (une barre en haut et une barre en bas) */
+span.blanc:hover {
+ border-bottom: solid rgb(214, 214, 214) 8px;
+ border-top: solid rgb(214, 214, 214) 8px;
+ margin-top:-8px;
+ transition:  0.4s;
+}
+
+/* Mise en place de deux barres lors de la souris sur une des lettres (une barre en haut et une barre en bas) */
+span.rouge:hover {
+ border-bottom: solid rgb(197, 26, 26) 8px;
+ border-top: solid rgb(197, 26, 26) 8px;
+ margin-top:-8px;
+ transition:  0.4s;
+}
+
+/* Animation du titre BIENVENUE et le bouton */
+@keyframes animation {
+  0% { 
+		opacity: 0; /*On le cache*/
+		transform: translateY(980px); /*A 980px vers le bas*/
+	}
+	100% { 
+		opacity: 1; /*On le rend visible*/
+		transform: translateY(0) ; /*On le remet a son emplacement que l'on a  donné*/
+	}
+}
+
+/* Mise en place du bouton général */
+a.btn {
+  width: 200px;
+  height: 60px;
+  font-size: 1.3rem;
+  font-family: 'Alfa Slab One', cursive;
+  font-weight: 500;
+  position: relative;
+  color: rgb(56, 51, 51);
+  background: white;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  border-radius:10px ;
+  margin-top: 60px;
+  animation: animation 1s forwards;
+  box-shadow: rgb(17 16 16) 0px 0px 0px 5px;
+
+}
+
+a.btn:hover{
+  color: rgb(255, 255, 255);
+  background: #0f5377
+}
+
+
+/*  Le bloc info */
+div.info{
+  margin: 0 auto;;
+  font-family: 'Alfa Slab One', cursive;
+  border: 1px solid #ddd;
+  background: #d1d1d1;
+  width: 40%;
+  background: #ddd;
+  text-align: center;
+  border-radius: 10%;
+  margin-top: 200px;
+  box-shadow: inset #000000 0 0 10px 3px;
+  justify-content: center;
+  letter-spacing: 2px;
+  padding: 50px;
+  text-align: justify;
+}
+
+/* Lien pour télécharger le manuel */
+a.manuel{
+  color: #e92525;
+}
+
+/* --------------------------------------------------- */
+/* -------------------------media---------------------*/
+/* --------------------------------------------------- */
+
+
+@media screen and (max-width: 1400px) {
+ 
+   h1 {
+    font-size: 5rem;
+  }
+
+  
+  #navigation ol{
+    list-style: none;
+    display: grid;
+    background: #2a5d7c;
+    height: 300px;
+    padding-top: 0;
+  
+  }
+ 
+  #navigation li a {
+    text-decoration: none;
+    color: white;
+    margin-right: 80px;
+    justify-content: flex-end;
+    font-size: 44px;
+    font-family: "Amatic SC", cursive;
+    letter-spacing: 2px;
+  }
+
+
+  nav li > ul {
+    display: none;
+    background: #003049;
+    border-radius: 0 0 10px 10px ;
+    box-shadow: black 4px 2px 10px;
+  }
+
+ 
+  nav li:hover{
+  z-index: 10;
+  }
+
+  nav li:hover > ul {
+    display: block;
+    width: 20%;
+    
+  }
+  
+  
+  
+  nav li:hover > ul.datePresident{
+    width: 200px;
+    background: #0f5377;
+    
+
+  }
+
+  
+nav li:hover > ul.periode{
+  width: 120px;
+    background: #0f5377;
+}
+
+
+  ul,
+li {
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+}
+
+/* Résolution téléphone portable */
+@media screen and (max-width: 600px) {
+
+
+   
+h1 {
+	font-size: 3rem;
+}
+body {
+ background: url('../images/elysee.jpg')  no-repeat;
+ background-size: cover;
+ 
+
+}
+
+#navigation ol{
+  list-style: none;
+  display: grid;
+  background: #2a5d7c;
+  height: 200px;
+  padding-top: 0;
+
+}
+
+#navigation li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 80px;
+  justify-content: flex-end;
+  font-size: 34px;
+  font-family: "Amatic SC", cursive;
+  letter-spacing: 2px;
+}
+
+  nav li > ul {
+    display: none;
+    background: #003049;
+    border-radius: 0 0 10px 10px ;
+    box-shadow: black 4px 2px 10px;
+  }
+
+  nav li:hover{
+  z-index: 10;
+  }
+
+
+  nav li:hover > ul {
+    display: block;
+    width: 40%;
+    
+  }
+  
+  
+  
+  nav li:hover > ul.datePresident{
+    width: 240px;
+    background: #0f5377;
+    
+
+  }
+
+  
+nav li:hover > ul.periode{
+  width: 120px;
+    background: #0f5377;
+}
+
+
+  ul,
+li {
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+  
+}
+
+
+@media screen and (max-width: 400px) {
+
+  body {
+    background: url('../images/elysee.jpg')  no-repeat;
+    background-size: cover;
+    
+   
+   }
+   
+h1 {
+	font-size: 3rem;
+}
+body {
+background:#2a5d7c
+ 
+
+}
+
+#navigation ol{
+  list-style: none;
+  display: grid;
+  background: #2a5d7c;
+  height: 600px;
+  padding-top: 0;
+
+}
+
+#navigation li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 80px;
+  justify-content: flex-end;
+  font-size: 34px;
+  font-family: "Amatic SC", cursive;
+  letter-spacing: 2px;
+}
+
+  nav li > ul {
+    display: none;
+    background: #003049;
+    border-radius: 0 0 10px 10px ;
+    box-shadow: black 4px 2px 10px;
+  }
+
+  nav li:hover{
+  z-index: 10;
+  }
+
+  nav li:hover > ul {
+    display: block;
+    width: 16%;
+    
+  }
+  
+  
+  
+  nav li:hover > ul.datePresident,
+  nav li:hover > ul.periode{
+      width: 200px;
+      background: #0f5377;
+      
+  
+    }
+
+  ul,
+li {
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+
+  
+}

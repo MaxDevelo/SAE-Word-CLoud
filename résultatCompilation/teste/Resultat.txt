@@ -1,0 +1,3 @@
+plus plus 3
+franc france 1
+franç françaises 2

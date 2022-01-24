@@ -1,0 +1,594 @@
+/* --------------------------------------------------- */
+/* ---------------------Font-Family-------------------- */
+/* --------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:wght@700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amatic+SC:wght@400;700&family=Roboto:wght@700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amatic+SC:wght@400;700&family=Lobster&family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Amatic+SC:wght@400;700&family=Lobster&family=Roboto:wght@700&display=swap");
+@font-face {
+  font-family: "University";
+  src: url("../font/University.otf");
+}
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+/* Pour  que la page web ne soit  collé sur les bord */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Les élément ne seront pas sélectionnés lorsque l'on sélectionne des élément de la page */
+*::selection {
+  display: block;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* --------------------------------------------------- */
+/* ---------------------Global----------------------- */
+/* --------------------------------------------------- */
+
+/* Mise en place du fond d'écran */
+body {
+  background: url("../images/palais.jpg") no-repeat center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  scroll-behavior: smooth;
+}
+
+/* Mise ne place du TITRE de la page */
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Lobster", cursive;
+  letter-spacing: 4px;
+  word-spacing: 6px;
+  color: aliceblue;
+  text-shadow: black 0 0 20px;
+  font-size: 3rem;
+  padding: 20px;
+}
+
+/* --------------------------------------------------- */
+/* ---------------------nuage de mot------------------ */
+/* --------------------------------------------------- */
+
+
+
+/* Nuage de mot */
+div.wordCLoud {
+  margin: 0 auto;
+  font-family: "Roboto", cursive;
+  border: none;
+  background: #f3f0f0bd;
+  width: 60%;
+  border-radius: 4%;
+  margin-top: 60px;
+  box-shadow: #000000 0 0 10px 3px; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.65;
+  padding: 30px;
+}
+
+/* Les mots du nuage de mots */
+div.wordCLoud p {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  transition: all 200ms ease-in;
+}
+
+
+
+/*Le nuage de mot général  */
+.wordCLoudGeneral {
+  margin: 0 auto;
+  font-family: "Roboto", cursive;
+  border: none;
+  background: #f3f0f0bd;
+  width: 50%;
+  border-radius: 10%;
+  margin-top: 60px;
+  box-shadow: #000000 0 0 10px 3px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.75;
+  padding: 30px;
+}
+
+div.wordCLoudGeneral p {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  transition: all 200ms ease-in;
+}
+
+h2{
+  text-align: center;
+  font-size: 2rem;
+  padding: 40px;
+  font-family: "University", cursive;
+  letter-spacing: 4px;
+}
+
+/* barres statistiques */
+
+h2{
+
+  text-align: center;
+  font-size: 2rem;
+  font-family: "University", cursive;
+  letter-spacing: 4px;
+}
+
+div.stats {
+  margin: 0 auto;
+  font-family: "Roboto", cursive;
+  border: none;
+  background: #d1ccccbd;
+  width: 55%;
+  border-radius: 4%;
+  margin-top: 60px;
+  box-shadow: #000000 0 0 10px 3px; 
+  padding: 20px;
+}
+
+.progress-bar{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: black;
+}
+
+
+.progress{
+  font-size: 2rem;
+  height: 30px;
+  border-radius: 10px;
+  border: black 2px solid
+}
+
+
+/* --------------------------------------------------- */
+/* ---------------------Navigation---------------------*/
+/* --------------------------------------------------- */
+
+
+/* Mise en place du menu */
+#navigation ol{
+  list-style: none;
+  display: flex;
+  background: #2a5d7c;
+  height: 60px; 
+  justify-content: center;
+  padding-top: 10px;
+
+}
+
+/* Mise en place des different lien sur le menu */
+#navigation li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 80px;
+  justify-content: flex-end;
+  font-size: 30px;
+  font-family: "Amatic SC", cursive;
+  letter-spacing: 2px;
+  font-weight: bold;
+ 
+}
+
+
+/* Barre blanche en dessous du mot lorsque l'on met la souris dessus */
+#navigation li a:hover {
+  border-bottom: white 4px solid;
+  transition: 0.2s ease-in-out;
+  
+}
+
+
+
+/* -----------------------Menu Déroulante------------------------------ */
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  z-index: 10; /*Permet d'etre mis en avant plan.q*/
+  white-space:nowrap
+  
+}
+
+/* Cible tous les élément (enfants) qui sont en dessous de nav et ul */
+nav > ul > li {
+  position: relative;
+  display: inline-block;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-top: 2.3%;
+  
+}
+
+
+
+li > ul > li:hover {
+  background-color: rgb(129, 175, 201);
+  transition: 0.4s ease-in-out;
+}
+li > ul > li:hover a {
+  color: #fff;
+  
+}
+li > ul > li {
+  padding: 5px;
+}
+
+nav li > ul {
+  display: none;
+  position: absolute;
+  border: 1px solid #444;
+  background: #003049;
+  border-radius: 0 0 10px 10px ;
+  box-shadow: black 4px 2px 10px;
+}
+
+nav li:hover > ul {
+  display: block;
+  width: 16%;
+  
+}
+
+
+
+nav li:hover > ul.datePresident{
+  width: 200px;
+  background: #0f5377;
+  
+
+}
+
+
+nav li:hover > ul.periode{
+width: 120px;
+  background: #0f5377;
+}
+
+/* Media screen pour la résolution au niveau des téléphones portable */
+@media screen and (max-width: 769px) {
+  body {
+    background: url("../images/palais.jpg") no-repeat center fixed;
+    background-size: cover;
+  }
+
+  div.wordCLoud {
+    background: #c9c3c3bd;
+    width: 80%;
+    border-radius: 4%;
+    margin-top: 60px;
+    box-shadow: #000000 0 0 10px 3px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.6;
+    padding: 0;
+    font-size: 80%;
+  }
+
+  div.wordCLoud p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    transition: all 200ms ease-in;
+  }
+
+  #graphiqueHlr{
+    margin: 0 auto;
+    font-family: "Roboto", cursive;
+    border: none;
+    background: #f3f0f0bd;
+    width: 100%;
+    border-radius: 4%;
+    box-shadow: #000000 0 0 10px 3px; 
+    line-height: 0.50;
+    padding: 30px;
+    margin-top: 100px;
+    
+  }
+}
+
+/* --------------------------------------------------- */
+/* -------------------------media---------------------*/
+/* --------------------------------------------------- */
+
+
+@media screen and (max-width: 1400px) {
+   body {
+    background: url("../images/palais.jpg") no-repeat center fixed;
+    background-size: cover;
+  }
+  h1 {
+
+   font-size: 5rem;
+ }
+
+ #navigation ol{
+  list-style: none;
+  display: grid;
+  background: #2a5d7c;
+  height: 300px;
+  padding-top: 0;
+
+}
+
+#navigation li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 80px;
+  justify-content: flex-end;
+  font-size: 44px;
+  font-family: "Amatic SC", cursive;
+  letter-spacing: 2px;
+}
+
+
+nav li > ul {
+  display: none;
+  background: #003049;
+  border-radius: 0 0 10px 10px ;
+  box-shadow: black 4px 2px 10px;
+}
+
+
+nav li:hover{
+z-index: 10;
+}
+
+nav li:hover > ul {
+  display: block;
+  width: 40%;
+  
+}
+
+
+
+ ul,
+li {
+ padding: 0;
+ margin: 0;
+ z-index: 0;
+}
+
+}
+
+/* Résolution téléphone portable */
+@media screen and (max-width: 600px) {
+
+  body {
+    background: url("../images/palais.jpg") no-repeat center fixed;
+    background-size: cover;
+  }
+  
+h1 {
+ font-size: 3rem;
+}
+
+#navigation ol{
+  list-style: none;
+  display: grid;
+  background: #2a5d7c;
+  height: 300px;
+  padding-top: 0;
+
+}
+
+#navigation li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 80px;
+  justify-content: flex-end;
+  font-size: 44px;
+  font-family: "Amatic SC", cursive;
+  letter-spacing: 2px;
+}
+
+
+nav li > ul {
+  display: none;
+  background: #003049;
+  border-radius: 0 0 10px 10px ;
+  box-shadow: black 4px 2px 10px;
+}
+
+
+nav li:hover{
+z-index: 10;
+}
+
+nav li:hover > ul {
+  display: block;
+  width: 40%;
+  
+}
+
+
+
+ ul,
+li {
+ padding: 0;
+ margin: 0;
+ z-index: 0;
+}
+
+ 
+}
+
+
+@media screen and (max-width: 400px) {
+
+  body {
+    background: url("../images/palais.jpg") no-repeat center fixed;
+    background-size: cover;
+  }
+
+h1 {
+ font-size: 3rem;
+}
+body {
+background:#2a5d7c
+
+
+}
+
+#navigation ol{
+  list-style: none;
+  display: grid;
+  background: #2a5d7c;
+  height: 300px;
+  padding-top: 0;
+
+}
+
+#navigation li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 80px;
+  justify-content: flex-end;
+  font-size: 44px;
+  font-family: "Amatic SC", cursive;
+  letter-spacing: 2px;
+}
+
+
+nav li > ul {
+  display: none;
+  background: #003049;
+  border-radius: 0 0 10px 10px ;
+  box-shadow: black 4px 2px 10px;
+}
+
+
+nav li:hover{
+z-index: 10;
+}
+
+nav li:hover > ul {
+  display: block;
+  width: 40%;
+  
+}
+
+
+
+ ul,
+li {
+ padding: 0;
+ margin: 0;
+ z-index: 0;
+}
+
+
+
+ 
+}
+
+@media screen and (max-width: 1000px) {
+
+  body {
+    background: url("../images/palais.jpg") no-repeat center fixed;
+    background-size: cover;
+  }
+
+  div.wordCLoud {
+    background: #c9c3c3bd;
+    width: 80%;
+    border-radius: 4%;
+    margin-top: 60px;
+    box-shadow: #000000 0 0 10px 3px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.6;
+    padding: 0;
+    font-size: 80%;
+  }
+
+  div.wordCLoud p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    transition: all 200ms ease-in;
+  }
+
+  #graphiqueHlr{
+    margin: 0 auto;
+    font-family: "Roboto", cursive;
+    border: none;
+    background: #f3f0f0bd;
+    width: 60%;
+    border-radius: 4%;
+    box-shadow: #000000 0 0 10px 3px; 
+    line-height: 0.50;
+    padding: 30px;
+    margin-top: 100px;
+    
+  }
+}
+@media screen and (max-width: 500px) {
+
+  body {
+    background: url("../images/palais.jpg") no-repeat center fixed;
+    background-size: cover;
+  }
+
+  
+  div.wordCLoud {
+    background: #c9c3c3bd;
+    width: 80%;
+    border-radius: 4%;
+    margin-top: 60px;
+    box-shadow: #000000 0 0 10px 3px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.6;
+    padding: 0;
+    font-size: 80%;
+  }
+
+  div.wordCLoud p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    transition: all 200ms ease-in;
+  }
+
+  #graphiqueHlr{
+    margin: 0 auto;
+    font-family: "Roboto", cursive;
+    border: none;
+    background: #f3f0f0bd;
+    width: 100%;
+    border-radius: 4%;
+    box-shadow: #000000 0 0 10px 3px; 
+    line-height: 0.50;
+    padding: 30px;
+    margin-top: 100px;
+    
+  }
+}
